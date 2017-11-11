@@ -7,24 +7,24 @@ using CountingKs.Data;
 
 namespace CountingKs.Controllers
 {
-  public class HomeController : Controller
-  {
-    public ActionResult Index()
+    public class HomeController : Controller
     {
-      var repo = new CountingKsRepository(new CountingKsContext());
+        public ActionResult Index()
+        {
+            var repo = new CountingKsRepository(new CountingKsContext());
 
-      var results = repo.GetAllFoodsWithMeasures()
-                        .Take(25)
-                        .ToList();
+            var results = repo.GetAllFoodsWithMeasures()
+                              .Take(25)
+                              .ToList();
 
-      return View(results);
+            return View(results);
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
+        }
     }
-
-    public ActionResult About()
-    {
-      ViewBag.Message = "Your app description page.";
-
-      return View();
-    }
-  }
 }
