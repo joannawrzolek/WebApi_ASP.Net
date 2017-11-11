@@ -53,7 +53,7 @@ namespace CountingKs
             var jsonFormatter = GlobalConfiguration.Configuration.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             jsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
-          
+           
         }
 
         static void CreateMediaTypes(JsonMediaTypeFormatter jsonFormatter)
