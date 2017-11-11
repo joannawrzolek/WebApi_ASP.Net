@@ -64,4 +64,8 @@ namespace CountingKs.Controllers
             Log.Information("No one listens to me!");
         }
   }
+   //TODO: add
+  //POST
+  //PUT
+  //Delete
 }
